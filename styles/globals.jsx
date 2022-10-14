@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
    --blue: #03213E;
    --gray: #FBFBFB;
    --white: #FEFEFE;
-   background-color: var(--gray);
+   background-color: var(--white);
  }
 
  * {
