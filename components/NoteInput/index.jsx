@@ -4,7 +4,7 @@ const NoteInpute = () => {
   return ( 
     <NoteInputeContainer>
       <h2>Note</h2>
-      <label for="todoText">
+      <label htmlFor="todoText">
         <input type="text" id="todotext" name="todoText" />
       </label>
     </NoteInputeContainer>
