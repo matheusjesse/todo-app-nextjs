@@ -1,10 +1,14 @@
 import HomeContainer from "./style";
+import Header from '../../components/Header'
 
 const Home = () => {
   return ( 
-    <HomeContainer>
-      <h1>Home page</h1>
-    </HomeContainer>
+    <>
+      <Header />
+      <HomeContainer>
+        <h1>Home page</h1>
+      </HomeContainer>
+    </>
    );
 }
 
