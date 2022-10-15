@@ -1,9 +1,14 @@
 import RegisterButtonContainer from './style';
 
-const RegisterButton = () => {
+const RegisterButton = ({ saveTodo }) => {
   return ( 
     <RegisterButtonContainer>
-      <button type="button">Salvar</button>
+      <button
+        type="button"
+        onClick={saveTodo}
+      >
+        Salvar
+      </button>
     </RegisterButtonContainer>
    );
 }
