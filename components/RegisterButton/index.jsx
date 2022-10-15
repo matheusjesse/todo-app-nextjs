@@ -1,7 +1,29 @@
 import RegisterButtonContainer from './style';
 
-const RegisterButton = ({ saveTodo, buttonDisabled }) => {
-  return ( 
+function RegisterButton({
+  buttonDisabled,
+  dayPeriod,
+  dayOfTheWeek,
+  noteText,
+  setDayPeriod,
+  setDayOfTheWeek,
+  setNoteText,
+}) {
+  function saveTodo() {
+    const data = JSON.parse(localStorage.getItem('todoList'));
+    const todo = {
+      id: Date.now(),
+      dayPeriod,
+      dayOfTheWeek,
+      noteText,
+    };
+    localStorage.setItem('todoList', JSON.stringify([...data, todo]));
+    setDayPeriod([]);
+    setDayOfTheWeek([]);
+    setNoteText('');
+  }
+
+  return (
     <RegisterButtonContainer>
       <button
         type="button"
@@ -11,7 +33,7 @@ const RegisterButton = ({ saveTodo, buttonDisabled }) => {
         Salvar
       </button>
     </RegisterButtonContainer>
-   );
+  );
 }
- 
+
 export default RegisterButton;
