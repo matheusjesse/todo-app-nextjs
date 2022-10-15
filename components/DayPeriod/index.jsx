@@ -22,7 +22,7 @@ const DayPeriod = ({ setDayPeriod, dayPeriod }) => {
         name="dayPeriod1"
         value="morning"
         onChange={dayPeriodChange}
-        checked={dayPeriod.find((item) => item === 'morning')}
+        checked={dayPeriod.filter((item) => item === 'morning').length}
       />
        Manhã </label>
       <label htmlFor="dayPeriod2">
@@ -32,7 +32,7 @@ const DayPeriod = ({ setDayPeriod, dayPeriod }) => {
         name="dayPeriod2"
         value="afternoon"
         onChange={dayPeriodChange}
-        checked={dayPeriod.find((item) => item === 'afternoon')}
+        checked={dayPeriod.filter((item) => item === 'afternoon').length}
       />
        Tarde </label>
       <label htmlFor="dayPeriod3">
@@ -42,7 +42,7 @@ const DayPeriod = ({ setDayPeriod, dayPeriod }) => {
         name="dayPeriod3"
         value="night"
         onChange={dayPeriodChange}
-        checked={dayPeriod.find((item) => item === 'night')}
+        checked={dayPeriod.filter((item) => item === 'night').length}
       />
        Noite </label>
     </DayPeriodContainer>
