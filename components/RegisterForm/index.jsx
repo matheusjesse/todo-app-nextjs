@@ -4,7 +4,6 @@ import DayOfTheWeekContainer from '../../components/DayOfTheWeek';
 import NoteInpute from '../../components/NoteInput';
 import RegisterButton from '../../components/RegisterButton';
 import { useEffect, useState } from 'react';
-import TodoList from '../../components/DayOfTheWeek';
 
 const RegisterForm = () => {
   const [dayPeriod, setDayPeriod] = useState([]);
