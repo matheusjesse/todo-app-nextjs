@@ -21,6 +21,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek1"
           value="sunday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'sunday')}
         />
         Domingo 
       </label>
@@ -31,6 +32,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek2"
           value="monday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'monday')}
         />
         Segunda
       </label>
@@ -41,6 +43,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek3"
           value="tuesday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'tuesday')}
         />
         Terça
       </label>
@@ -51,6 +54,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek4"
           value="wednesday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'wednesday')}
         />
         Quarta
       </label>
@@ -61,6 +65,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek5"
           value="thursday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'thursday')}
         />
         Quinta
       </label>
@@ -71,6 +76,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek6"
           value="friday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'friday')}
         />
         Sexta
       </label>
@@ -81,6 +87,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           name="dayOfTheWeek7"
           value="saturday"
           onChange={dayOfTheWeekChange}
+          checked={dayOfTheWeek.find((item) => item === 'saturday')}
         />
         Sábado
       </label>
