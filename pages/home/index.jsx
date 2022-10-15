@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import HomeContainer from './style';
 import Header from '../../components/Header';
+import mockData from '../../mocks/mockTodo';
 
 function Home() {
   useEffect(() => {
-    localStorage.setItem('todoList', JSON.stringify([]));
+    localStorage.setItem('todoList', JSON.stringify(mockData));
   }, []);
 
   return (
