@@ -18,6 +18,13 @@ const RegisterButtonContainer = styled.div`
     border: none;
   }
 
+  button:disabled {
+    background: var(--gray);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    box-shadow: 0px 0px 4px 1px var(--blue);
+  }
+
 `;
 
 export default RegisterButtonContainer;
