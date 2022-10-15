@@ -1,11 +1,23 @@
 import NoteInputeContainer from './style';
 
-const NoteInpute = () => {
+const NoteInpute = ({noteText, setNoteText}) => {
+
+  function handleTextInput(e) {
+    const { value } = e.target;
+    setNoteText(value);
+  }
+
   return ( 
     <NoteInputeContainer>
       <h2>Note</h2>
       <label htmlFor="todoText">
-        <input type="text" id="todotext" name="todoText" />
+        <input
+          type="text"
+          id="todotext"
+          name="todoText"
+          value={noteText}
+          onChange={handleTextInput}
+        />
       </label>
     </NoteInputeContainer>
    );
