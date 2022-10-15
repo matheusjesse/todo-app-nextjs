@@ -1,9 +1,9 @@
-import RegisterContainer from "./style";
-import Header from '../../components/Header'
-import RegisterFormContainer from '../../components/RegisterForm'
+import RegisterContainer from './style';
+import Header from '../../components/Header';
+import RegisterFormContainer from '../../components/RegisterForm';
 
-const Register = () => {
-  return ( 
+function Register() {
+  return (
     <>
       <Header />
       <RegisterContainer>
@@ -11,7 +11,7 @@ const Register = () => {
         <RegisterFormContainer />
       </RegisterContainer>
     </>
-   );
+  );
 }
 
 export default Register;

@@ -1,11 +1,9 @@
 import TodoListContainer from './style';
 
-const TodoList = () => {
-  return ( 
-    <TodoListContainer>
-
-    </TodoListContainer>
-   );
+function TodoList() {
+  return (
+    <TodoListContainer />
+  );
 }
- 
+
 export default TodoList;

@@ -1,13 +1,12 @@
 import NoteInputeContainer from './style';
 
-const NoteInpute = ({noteText, setNoteText}) => {
-
+function NoteInpute({ noteText, setNoteText }) {
   function handleTextInput(e) {
     const { value } = e.target;
     setNoteText(value);
   }
 
-  return ( 
+  return (
     <NoteInputeContainer>
       <h2>Note</h2>
       <label htmlFor="todoText">
@@ -21,7 +20,7 @@ const NoteInpute = ({noteText, setNoteText}) => {
         />
       </label>
     </NoteInputeContainer>
-   );
+  );
 }
- 
+
 export default NoteInpute;

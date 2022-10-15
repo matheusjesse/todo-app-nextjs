@@ -1,21 +1,20 @@
-import HomeContainer from "./style";
-import Header from '../../components/Header'
-import { useEffect } from "react";
+import { useEffect } from 'react';
+import HomeContainer from './style';
+import Header from '../../components/Header';
 
-const Home = () => {
-
+function Home() {
   useEffect(() => {
     localStorage.setItem('todoList', JSON.stringify([]));
-  }, [])
+  }, []);
 
-  return ( 
+  return (
     <>
       <Header />
       <HomeContainer>
         <h1>Home page</h1>
       </HomeContainer>
     </>
-   );
+  );
 }
 
 export default Home;

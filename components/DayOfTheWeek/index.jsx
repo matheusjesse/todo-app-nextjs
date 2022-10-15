@@ -1,16 +1,14 @@
 import DayOfTheWeekContainer from './style';
 
-const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
-
+function TodoList({ dayOfTheWeek, setDayOfTheWeek }) {
   function dayOfTheWeekChange(e) {
-    const {value, checked} = e.target;
+    const { value, checked } = e.target;
     setDayOfTheWeek([...dayOfTheWeek, value]);
 
     if (!checked) {
-      const removeDayOfTheWeek = dayOfTheWeek.filter((element) => element !== value)
+      const removeDayOfTheWeek = dayOfTheWeek.filter((element) => element !== value);
       setDayOfTheWeek(removeDayOfTheWeek);
     }
-
   }
   return (
     <DayOfTheWeekContainer>
@@ -24,7 +22,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
           onChange={dayOfTheWeekChange}
           checked={dayOfTheWeek.filter((item) => item === 'sunday').length}
         />
-        Domingo 
+        Domingo
       </label>
       <label htmlFor="dayOfTheWeek2">
         <input
@@ -99,7 +97,7 @@ const TodoList = ({dayOfTheWeek, setDayOfTheWeek}) => {
         Sábado
       </label>
     </DayOfTheWeekContainer>
-   );
+  );
 }
- 
+
 export default TodoList;
