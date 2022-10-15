@@ -10,10 +10,15 @@ const RegisterForm = () => {
   const [dayPeriod, setDayPeriod] = useState([]);
   const [dayOfTheWeek, setDayOfTheWeek] = useState([]);
   const [noteText, setNoteText] = useState('');
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+  useEffect(() => {
+    setButtonDisabled(true);
+    const fieldsValidation = dayPeriod.length > 0 && dayOfTheWeek.length > 0 && noteText.length > 3;
+    if (fieldsValidation) setButtonDisabled(false);
+  }, [dayOfTheWeek, dayPeriod, noteText]);
 
   function saveTodo() {
     const data = JSON.parse(localStorage.getItem('todoList'));
-    console.log(data);
     const todo = {
       id: Date.now(),
       dayPeriod,
@@ -21,6 +26,9 @@ const RegisterForm = () => {
       noteText,
     }
     localStorage.setItem('todoList', JSON.stringify([...data, todo]));
+    setDayPeriod([]);
+    setDayOfTheWeek([]);
+    setNoteText('');
   }
 
   return ( 
@@ -28,7 +36,7 @@ const RegisterForm = () => {
       <DayPeriod setDayPeriod={setDayPeriod} dayPeriod={dayPeriod} />
       <DayOfTheWeekContainer setDayOfTheWeek={setDayOfTheWeek} dayOfTheWeek={dayOfTheWeek}/>
       <NoteInpute noteText={noteText} setNoteText={setNoteText}/>
-      <RegisterButton saveTodo={saveTodo}/>
+      <RegisterButton saveTodo={saveTodo} buttonDisabled={buttonDisabled}/>
     </RegisterFormContainer>
    );
 }
