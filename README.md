@@ -1,4 +1,4 @@
-ToDo - APP usando NextJS
+ToDo - APP usando NextJS (Ainda em Desenvolvimento)
 
 Esse é uma plicação de ToDos desenvolvida com NextJs, utilizando a metodologia Mobile First, pensando primeiramente nos dispositivos móveis.
 
