@@ -12,6 +12,7 @@ const NoteInpute = ({noteText, setNoteText}) => {
       <h2>Note</h2>
       <label htmlFor="todoText">
         <input
+          data-testid="note-text-id"
           type="text"
           id="todotext"
           name="todoText"
