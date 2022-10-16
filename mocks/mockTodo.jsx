@@ -3,24 +3,24 @@ const mockData = [
     id: 1665864379046,
     dayPeriod: [
       'morning',
-      'afternoon',
     ],
     dayOfTheWeek: [
       'sunday',
       'friday',
     ],
     noteText: 'Trabalhar',
+    checked: false,
   },
   {
     id: 1665868719733,
     dayPeriod: [
-      'morning',
       'afternoon',
     ],
     dayOfTheWeek: [
       'monday',
     ],
     noteText: 'Estudar',
+    checked: false,
   },
   {
     id: 1665868737180,
@@ -31,6 +31,7 @@ const mockData = [
       'monday',
     ],
     noteText: 'Comprar Café',
+    checked: false,
   },
   {
     id: 1665868770240,
@@ -42,6 +43,7 @@ const mockData = [
       'saturday',
     ],
     noteText: 'Assistir Série',
+    checked: false,
   },
 ];
 
