@@ -13,7 +13,7 @@ function RegisterButton({
     const data = JSON.parse(localStorage.getItem('todoList'));
     const todo = {
       id: Date.now(),
-      dayPeriod,
+      dayPeriod: [dayPeriod[0]],
       dayOfTheWeek,
       noteText,
     };
