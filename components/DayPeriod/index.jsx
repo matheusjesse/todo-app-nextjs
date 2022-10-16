@@ -3,7 +3,7 @@ import DayPeriodContainer from './style';
 function DayPeriod({ setDayPeriod, dayPeriod }) {
   function dayPeriodChange(e) {
     const { value, checked } = e.target;
-    setDayPeriod([...dayPeriod, value]);
+    setDayPeriod([value]);
 
     if (!checked) {
       const removePeriod = dayPeriod.filter((element) => element !== value);
@@ -15,7 +15,7 @@ function DayPeriod({ setDayPeriod, dayPeriod }) {
     <DayPeriodContainer>
       <label htmlFor="dayPeriod1">
         <input
-          type="checkbox"
+          type="radio"
           id="dayPeriod1"
           name="dayPeriod1"
           value="morning"
@@ -26,7 +26,7 @@ function DayPeriod({ setDayPeriod, dayPeriod }) {
       </label>
       <label htmlFor="dayPeriod2">
         <input
-          type="checkbox"
+          type="radio"
           id="dayPeriod2"
           name="dayPeriod2"
           value="afternoon"
@@ -37,7 +37,7 @@ function DayPeriod({ setDayPeriod, dayPeriod }) {
       </label>
       <label htmlFor="dayPeriod3">
         <input
-          type="checkbox"
+          type="radio"
           id="dayPeriod3"
           name="dayPeriod3"
           value="night"
